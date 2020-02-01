@@ -1,4 +1,4 @@
-#JetCake Project
+# JetCake Project
 ## Tools
 create-react-app cli
 Formik
