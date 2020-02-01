@@ -1,38 +1,169 @@
-.App {
-  text-align: center;
+:root{
+  --main-background:  hsl(218, 28%, 13%);
+  --footer-background: hsl(216, 53%, 9%);
+  --accent-color: hsl(176, 68%, 64%);
+}
+/* body::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(./assets/bg-curvy-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: auto 65%;
+} */
+a{
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: #fff;
+}
+a:hover{
+  color: var(--accent-color);
+}
+.medium-font-size{
+  font-size: 1.2em;
+}
+.error{
+  color: rgb(223, 59, 59);
+  margin-top: -2em;
+  font-size: 0.9em;
+}
+.btn-link{
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+.btn-link:hover{
+  color: var(--accent-color);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header{
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -moz-box;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding: 1em;
 }
 
-.App-link {
-  color: #61dafb;
+header img{
+  width: 80px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+header .navigation{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  width: 100%;
+}
+.navigation li{
+  display: inline-block;
+  padding-left : 1em;
+  font-size: 0.9em;
+}
+
+main{
+  padding: 1em 2em;
+  min-height: 100%;
+}
+
+footer{
+  margin-top: 3em;
+  padding: 2em;
+  background-color: hsl(216, 53%, 9%);
+  
+}
+
+@media screen and  (min-width:580px){
+  .hero {
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
   }
-  to {
-    transform: rotate(360deg);
+  .hero h1{
+    font-size: 2.7em;
+  }
+  footer{
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -moz-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .form-container{
+      width: 60%;
+      margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 968px){
+  /*========Signup page============*/
+  .form-container{
+    width: 40%;
+  }
+
+  /*========Header,footer&Homepage========*/
+
+  header{
+    padding: 2em 3em 1em 3em;
+  }
+  header img{
+    width: auto;
+  }
+  .navigation li{
+    font-size: 1.2em;
+    padding-left: 2.5em;
+  }
+  .hero {
+    width: 50%;
+    margin-bottom: 50px;
+  }
+  .hero img{
+    width: 80%;
+  }
+  .features-section{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .features-section > *{
+    flex: 1 50%;
+  }
+  .productivity{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .productivity div{
+    margin-left: 4em;
+  }
+  .productivity img{
+    width: 50%;
+  }
+  .productivity h2{
+    font-size: 3em;
+  }
+  footer{
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -moz-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 3em;
   }
 }

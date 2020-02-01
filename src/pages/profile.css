@@ -1,0 +1,55 @@
+.image-container{
+    width: 100%;
+    margin: 2em auto;
+    position: relative;
+}
+.select-file{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px !important;
+    border: none !important;
+}
+
+.image-container img{
+    max-width: 100%;
+}
+
+input:disabled{
+    color: grey;
+}
+
+.profile-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 768px){
+    .image-container{
+        width: 60%;
+    }
+  }
+
+  @media screen and (min-width: 968px){
+    .profile-container{
+        width: 70%;
+        margin: auto;
+    }
+    .content{
+        display: flex;
+    }
+    .image-container{
+        width: 350px;
+        height: min-content;
+        margin: 0;
+    }
+    .image-container img{
+        max-width: 100%;
+    }
+    .profile-container .form-container{
+        margin-left:3em;
+        margin-right: 3em;
+        width: 60%;
+    }
+}

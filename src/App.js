@@ -1,25 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter as Router, Route } from 'react-router-dom';
+import createHistory from 'history/createBrowserHistory';
+import { AuthProvider } from './context/Auth-context';
+import { Header } from './layouts/Header';
+import { Hero } from './layouts/hero/Hero';
+import { Main } from './layouts/Main';
+import { Footer } from './layouts/Footer';
+
+const history = createHistory();
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+      <Router history={history}>
+        <div className="App">
+          <Header />
+          <Route exact path="/">
+            <Hero />
+          </Route>
+          <Main />
+          <Footer />
+        </div>
+      </Router>
+    </AuthProvider>
   );
 }
 
